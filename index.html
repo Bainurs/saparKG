@@ -9,69 +9,143 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-          <a class="navbar-brand" href="#">Sapar.kg</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Услуги</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">О нас</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Контакты</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Стать водителем</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Sapar.kg</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#service">Услуги</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">О нас</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Стать водителем</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-      <section class="mt-5">
-          <div class="container">
-              <div class="row justify-content-between">
+  <section class="mt-5" id="service">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-6">
+          <h1 class="text-primary fw-bold">
+              Удобный сервис для поездок и переводов по всей стране
+          </h1>    
+          <img src="./taxi.jpg" class="img-fluid" alt="Taxi">
+        </div>
+
+        <div class="col-5 row mt-3">
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-taxi" type="button" role="tab" aria-controls="pills-taxi" aria-selected="true">Заказать машину</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-parcel" type="button" role="tab" aria-controls="pills-parcel" aria-selected="false">Отправить посылку</button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-taxi" role="tabpanel" aria-labelledby="pills-taxi-tab">
+              <form action="">
+                <div class="form-group">
+                  <label for="basic-url" class="form-label">Откуда адресс</label>
+                  <input type="text" name="from_address" class="form-control" placeholder="Откуда адресс">
+                </div>
+                <div class="form-group mt-3">
+                  <label for="basic-url" class="form-label">Куда адресс</label>
+                  <input type="text" name="where_address" class="form-control" placeholder="Куда адресс">
+                </div>
+                <div class="row">
+                  <div class="col-4 pr-0">
+                    <div class="form-group mt-3">
+                        <label for="basic-url" class="form-label">Время</label>
+                        <input type="time" name="time" class="form-control" placeholder="Время">
+                    </div>
+                  </div>
                   <div class="col-6">
-                      <h2>
-                          Удобный сервис для поездок и переводов по всей стране
-                      </h2>    
-                      <img src="./taxi.jpg" class="img-fluid" alt="Taxi">
+                    <div class="form-group mt-3">
+                      <label for="basic-url" class="form-label">Пассажир</label>
+                      <input type="text" name="count_passenger" class="form-control" placeholder="Сколько пассажиров">
+                    </div>
                   </div>
-                  <div class="col-5 row align-items-end">
-                    <form action="">
-                        <div class="form-group">
-                            <label for="basic-url" class="form-label">Откуда адресс</label>
-                            <input type="text" class="form-control" placeholder="Откуда адресс">
-                        </div>
-                        <div class="form-group mt-3">
-                            <label for="basic-url" class="form-label">Куда адресс</label>
-                            <input type="text" class="form-control" placeholder="Куда адресс">
-                        </div>
-                       <div class="row">
-                           <div class="col-4 pr-0">
-                                <div class="form-group mt-3">
-                                    <label for="basic-url" class="form-label">Время</label>
-                                    <input type="text" class="form-control" placeholder="Откуда адресс">
-                                </div>
-                           </div>
-                           <div class="col-6">
-                                <div class="form-group mt-3">
-                                    <label for="basic-url" class="form-label"></label>
-                                    <input type="text" class="form-control" placeholder="Откуда адресс">
-                                </div>
-                           </div>
-                       </div>
-                    </form>
+                </div>
+                <div class="col-6">
+                  <div class="form-group mt-3">
+                      <button class="btn btn-primary">Рассчитать</button>
                   </div>
-              </div>
+                </div>  
+                <div class="col-6">
+                  <div class="form-group mt-3">
+                    <label for="basic-url" class="form-label">Телефон</label>
+                    <input type="text" name="phone" class="form-control" placeholder="Введите номер телефона">
+                  </div>
+                </div>  
+                <div class="col-6">
+                  <div class="form-group mt-3">
+                      <button class="btn btn-primary">Заказать</button>
+                  </div>
+                </div>  
+              </form>
+            </div>
+
+            <div class="tab-pane fade" id="pills-parcel" role="tabpanel" aria-labelledby="pills-parcel-tab">
+              <form action="">
+                <div class="form-group">
+                  <label for="basic-url" class="form-label">Откуда адресс</label>
+                  <input type="text" name="from_address" class="form-control" placeholder="Откуда адресс">
+                </div>
+                <div class="form-group mt-3">
+                  <label for="basic-url" class="form-label">Куда адресс</label>
+                  <input type="text" name="where_address" class="form-control" placeholder="Куда адресс">
+                </div>
+                <div class="row">
+                  <div class="col-4 pr-0">
+                    <div class="form-group mt-3">
+                        <label for="basic-url" class="form-label">Время</label>
+                        <input type="time" name="time" class="form-control" placeholder="Время">
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-group mt-3">
+                      <label for="basic-url" class="form-label">Пассажир</label>
+                      <input type="text" name="count_passenger" class="form-control" placeholder="Сколько пассажиров">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group mt-3">
+                      <button class="btn btn-primary">Рассчитать</button>
+                  </div>
+                </div>  
+                <div class="col-6">
+                  <div class="form-group mt-3">
+                    <label for="basic-url" class="form-label">Телефон</label>
+                    <input type="text" name="phone" class="form-control" placeholder="Введите номер телефона">
+                  </div>
+                </div>  
+                <div class="col-6">
+                  <div class="form-group mt-3">
+                      <button class="btn btn-primary">Заказать</button>
+                  </div>
+                </div>  
+              </form>
+            </div>
           </div>
-      </section>
+          
+        </div>
+      </div>
+    </div>
+  </section>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
