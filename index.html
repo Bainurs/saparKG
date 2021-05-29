@@ -5,52 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
     <title>Sapar KG</title>
 </head>
 <body>
     
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-light shadow pb-3">
     <div class="container">
-      <a class="navbar-brand" href="#">Sapar.kg</a>
+      <a class="navbar-brand logo-text" href="#">
+        <img src="./img/Sapar.kg.svg" class="img-fluid" alt="">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#service">Услуги</a>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav me-5" id="navigation">
+          <li class="nav-item me-3">
+            <a class="nav-link active" onclick="ActiveLinks(this)" aria-current="page" href="#service">Услуги</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">О нас</a>
+          <li class="nav-item me-3">
+            <a class="nav-link" onclick="ActiveLinks(this)" href="#about">О нас</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Контакты</a>
+          <li class="nav-item me-3">
+            <a class="nav-link" onclick="ActiveLinks(this)" href="#contact">Контакты</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Стать водителем</a>
+          <li class="nav-item me-3">
+            <a class="nav-link" onclick="ActiveLinks(this)" href="reg.html">Стать водителем</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <section class="mt-5" id="service">
+  <section class="my-5 pt-4" id="service">
     <div class="container">
-      <div class="row justify-content-between">
-        <div class="col-6">
-          <h1 class="text-primary fw-bold">
+      <div class="row justify-content-center justify-content-lg-between">
+        <div class="col-12 col-md-6">
+          <h1 class="text-primary fw-bold text-center px-5">
               Удобный сервис для поездок и переводов по всей стране
           </h1>    
-          <img src="./taxi.jpg" class="img-fluid" alt="Taxi">
+          <img src="./img/taxi.jpg" class="img-fluid" alt="Taxi">
         </div>
 
-        <div class="col-5 row mt-3">
-          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <div class="col-10 col-md-5 shadow px-5 py-4 rounded">
+          <ul class="nav nav-pills justify-content-center mb-3" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-taxi" type="button" role="tab" aria-controls="pills-taxi" aria-selected="true">Заказать машину</button>
+              <button class="nav-link active" id="pills-taxi-tab" data-bs-toggle="pill" data-bs-target="#pills-taxi" type="button" role="tab" aria-controls="pills-taxi" aria-selected="true">Заказать машину</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-parcel" type="button" role="tab" aria-controls="pills-parcel" aria-selected="false">Отправить посылку</button>
+              <button class="nav-link" id="pills-parcel-tab" data-bs-toggle="pill" data-bs-target="#pills-parcel" type="button" role="tab" aria-controls="pills-parcel" aria-selected="false">Отправить посылку</button>
             </li>
           </ul>
 
@@ -66,41 +70,76 @@
                   <input type="text" name="where_address" class="form-control" placeholder="Куда адресс">
                 </div>
                 <div class="row">
-                  <div class="col-4 pr-0">
+                  <div class="col-6 col-lg-4 pr-0">
                     <div class="form-group mt-3">
                         <label for="basic-url" class="form-label">Время</label>
                         <input type="time" name="time" class="form-control" placeholder="Время">
                     </div>
                   </div>
-                  <div class="col-6">
+                  <div class="col-6 col-lg-8">
                     <div class="form-group mt-3">
                       <label for="basic-url" class="form-label">Пассажир</label>
                       <input type="text" name="count_passenger" class="form-control" placeholder="Сколько пассажиров">
                     </div>
                   </div>
                 </div>
-                <div class="col-6">
-                  <div class="form-group mt-3">
-                      <button class="btn btn-primary">Рассчитать</button>
+                <div class="row">
+                  <div class="col-4 d-flex align-items-end">
+                    <div class="form-group">
+                        <button class="btn btn-primary">Рассчитать</button>
+                    </div>
+                  </div>  
+                  <div class="col-8">
+                    <label for="basic-url" class="form-label">Итого</label>
+                    <input type="text" id="price" class="form-control" placeholder="0" disabled>
                   </div>
-                </div>  
-                <div class="col-6">
-                  <div class="form-group mt-3">
-                    <label for="basic-url" class="form-label">Телефон</label>
-                    <input type="text" name="phone" class="form-control" placeholder="Введите номер телефона">
-                  </div>
-                </div>  
-                <div class="col-6">
-                  <div class="form-group mt-3">
-                      <button class="btn btn-primary">Заказать</button>
-                  </div>
-                </div>  
+
+                  <div class="col-8">
+                    <div class="form-group mt-3">
+                      <label for="basic-url" class="form-label">Ваш номер телефона</label>
+                      <input type="tel" name="phone" class="form-control" placeholder="+996701341231">
+                    </div>
+                  </div>  
+                  <div class="col-4 d-flex align-items-end justify-content-end">
+                    <div class="form-group">
+                        <button class="btn btn-success ml-auto">Заказать</button>
+                    </div>
+                  </div> 
+                </div>
               </form>
             </div>
 
             <div class="tab-pane fade" id="pills-parcel" role="tabpanel" aria-labelledby="pills-parcel-tab">
               <form action="">
                 <div class="form-group">
+                  <p class="mb-2">Вес посылки</p>
+                  <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnweight" value="1" id="btnweight1" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="btnweight1">До 1 кг</label>
+                  
+                    <input type="radio" class="btn-check" name="btnweight" value="5" id="btnweight2" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnweight2">До 5 кг</label>
+                  
+                    <input type="radio" class="btn-check" name="btnweight" value="10" id="btnweight3" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnweight3">До 10 кг</label>
+                  
+                    <input type="radio" class="btn-check" name="btnweight" value="15" id="btnweight4" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnweight4">До 15 кг</label>
+                  
+                    <input type="radio" class="btn-check" name="btnweight" value="20" id="btnweight5" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnweight5">До 20 кг</label>
+                  </div>
+                  <div class="form-group mt-3">
+                    <p class="mb-2">Как доставить</p>
+                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                      <input type="radio" class="btn-check" name="btncar" value="Легковое авто" id="btncar1" autocomplete="off" checked>
+                      <label class="btn btn-outline-primary" for="btncar1">На легковом авто</label>
+                    
+                      <input type="radio" class="btn-check" name="btncar" value="Грузовое авто" id="btncar2" autocomplete="off">
+                      <label class="btn btn-outline-primary" for="btncar2">На грузовом авто</label>
+                    </div>
+                  </div>
+                <div class="form-group mt-3">
                   <label for="basic-url" class="form-label">Откуда адресс</label>
                   <input type="text" name="from_address" class="form-control" placeholder="Откуда адресс">
                 </div>
@@ -108,36 +147,34 @@
                   <label for="basic-url" class="form-label">Куда адресс</label>
                   <input type="text" name="where_address" class="form-control" placeholder="Куда адресс">
                 </div>
-                <div class="row">
-                  <div class="col-4 pr-0">
-                    <div class="form-group mt-3">
-                        <label for="basic-url" class="form-label">Время</label>
-                        <input type="time" name="time" class="form-control" placeholder="Время">
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="form-group mt-3">
-                      <label for="basic-url" class="form-label">Пассажир</label>
-                      <input type="text" name="count_passenger" class="form-control" placeholder="Сколько пассажиров">
-                    </div>
-                  </div>
+                <div class="form-group mt-3">
+                  <label for="basic-url" class="form-label">Номер телефона получателя</label>
+                  <input type="tel" name="phone_recipient" class="form-control" placeholder="+996701315415">
                 </div>
-                <div class="col-6">
-                  <div class="form-group mt-3">
-                      <button class="btn btn-primary">Рассчитать</button>
+                <div class="row">
+                  <div class="col-4 d-flex align-items-end">
+                    <div class="form-group">
+                        <button class="btn btn-primary">Рассчитать</button>
+                    </div>
+                  </div>  
+                  <div class="col-8">
+                    <label for="basic-url" class="form-label">Итого</label>
+                    <input type="text" id="price" class="form-control" placeholder="0" disabled>
                   </div>
-                </div>  
-                <div class="col-6">
-                  <div class="form-group mt-3">
-                    <label for="basic-url" class="form-label">Телефон</label>
-                    <input type="text" name="phone" class="form-control" placeholder="Введите номер телефона">
-                  </div>
-                </div>  
-                <div class="col-6">
-                  <div class="form-group mt-3">
-                      <button class="btn btn-primary">Заказать</button>
-                  </div>
-                </div>  
+
+                  <div class="col-8">
+                    <div class="form-group mt-3">
+                      <label for="basic-url" class="form-label">Ваш номер телефона</label>
+                      <input type="tel" name="phone" class="form-control" placeholder="+996701341231">
+                    </div>
+                  </div>  
+                  <div class="col-4 d-flex align-items-end justify-content-end">
+                    <div class="form-group">
+                        <button class="btn btn-primary ml-auto">Отправить заказ</button>
+                    </div>
+                  </div> 
+                </div>
+                 
               </form>
             </div>
           </div>
@@ -147,7 +184,229 @@
     </div>
   </section>
 
+  <section class="my-5" id="howWeWork">
+    <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <h2 class="text-primary fw-bold text-center fs-1">Как мы работаем</h2>
+          </div>
+          <div class="col-12 col-md-10 col-lg-8 mt-4">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="d-flex justify-content-center mb-3">
+                  <img src="./img/checklist.png" class="img-fluid" alt="">
+                </div>
+                <p class="text-center ff-montserrat">
+                  Мгновенный расчёт стоимости в форме заказа, цена обновляется
+                  в процессе заполнения формы
+                </p>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="d-flex justify-content-center mb-3">
+                  <img src="./img/express-delivery.png" class="img-fluid" alt="">
+                </div>
+                <p class="text-center ff-montserrat">
+                  Примерно за 7 минут назначим заказ ближайшего курьера с самым
+                  высоким рейтингом
+                </p>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="d-flex justify-content-center mb-3">
+                  <img src="./img/tracking.png" class="img-fluid" alt="">
+                </div>
+                <p class="text-center ff-montserrat">
+                  Оформить заказ на курьерскую или грузовую доставку
+                  можно без регистрации и договора
+                </p>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="d-flex justify-content-center mb-3">
+                  <img src="./img/way.png" class="img-fluid" alt="">
+                </div>
+                <p class="text-center ff-montserrat">
+                  Маршрут по доставке можно менять на ходу. Все изменения
+                  мгновенно отображаются у курьера
+                </p>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="d-flex justify-content-center mb-3">
+                  <img src="./img/wallet.png" class="img-fluid" alt="">
+                </div>
+                <p class="text-center ff-montserrat">
+                  Оплачивать доставку можно картой или наличными на любом из
+                  адресов заказа. Для юрлиц доступен безнал
+                </p>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="d-flex justify-content-center mb-3">
+                  <img src="./img/message.png" class="img-fluid" alt="">
+                </div>
+                <p class="text-center ff-montserrat">
+                  Смс-уведомления на каждом адресе по мере выполнения заказа
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <section class="my-5" id="about">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <h2 class="text-primary fw-bold text-center fs-1">О нас</h2>
+        </div>
+        <div class="col-12 col-md-10 col-lg-8 mt-4">
+          <p class="text-center ff-montserrat">
+            <b>Sapar.kg</b> - это динамично развивающая таксомоторная компания
+            по перевозке пассажиров. Мы работаем с 2014 года, и за столь короткое
+            время мы заслужили доверие горожан и гостей столицы. Отличается  наша 
+            компания от других тем, что в автопарке у нас насчитывается свыше 2000
+            автомобилей и что не маловажно по приемлемым ценам доставят вас до 
+            нужного место и это ещё не все, мы предоставляем следующие скидки: а 
+            именно, ветеранам великой отечественной войны 100% скидку на проезд 
+            пожизненно а также инвалидам-колясочникам которым трудно передвигаться
+            без посторонней помощи 50% скидку на проезд. Со дня независимости Кыргызской
+            Республики это единственная компания которая при обращении в наш <b>Call-Center</b>
+            представляется на официальном кыргызском языке и предоставляет право выбора языка
+            нашим клиентам
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="my-5" id="contact">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <span class="text-sapar ff-pd">
+            Sapar.kg
+          </span>
+          <h4>
+            В нужное время - в нужном месте!
+          </h4>
+        </div>
+        <div class="col-12 col-md-10 col-lg-8 mt-4">
+          <div class="row">
+            <div class="col-12 col-md-5">
+              <p>
+                Экспресс доставка документов и
+                посылок для организаций, срочная
+                доставка корреспонденции,
+                покупок, цветов, еды, подарков и
+                грузов до 1,5 т. — наиболее частые
+                заказы в нашей компании.
+              </p>
+              <p>
+                Но при этом мы не ограничиваем
+                спектр курьерских услуг и без
+                проблем можем купить
+              </p>
+            </div>
+            <div class="col-12 col-md-6  offset-md-1">
+              <p>
+                и привезти товары и продукты из
+                интернет-магазина, организовать доставку
+                для интернет-магазина, кафе,
+                супермаркета, ресторана или любого
+                другого бизнеса.
+              </p>
+
+              <p>
+                Круглосуточно на нашем сайте вы можете
+                вызвать курьера всего за минуту и
+                оформить срочную курьерскую доставку
+                без лишней бюрократии, переговоров и
+                звонков в колл-центр. Вы можете заказать
+                как пешего, так и курьера на личном авто.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-5 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">
+                <img src="./img/Sapar.kg.svg" class="img-fluid" alt="">
+              </a>
+            </li>
+            <li class="mt-3">
+              <ul class="d-flex list-unstyled">
+                <li class="me-3">
+                  <a href="#" class="fs-3 text-dark"><i class="fab fa-whatsapp"></i></a>
+                </li>
+                <li class="me-3">
+                  <a href="#" class="fs-3 text-dark"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li class="me-3">
+                  <a href="#" class="fs-3 text-dark"><i class="fab fa-facebook-square"></i></a>
+                </li>
+                <li class="me-3">
+                  <a href="#" class="fs-3 text-dark"><i class="fab fa-vk"></i></a>
+                </li>
+                <li class="me-3">
+                  <a href="#" class="fs-3 text-dark"><i class="far fa-envelope"></i></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-3">
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-danger">Как мы работаем</a>
+            </li>
+            <li>
+              <a href="#" class="text-danger">Вакансии</a>
+            </li>
+            <li>
+              <a href="#" class="text-danger">Грузоперевозки</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-danger">Тарифы</a>
+            </li>
+            <li>
+              <a href="#" class="text-danger">Курьерам</a>
+            </li>
+            <li>
+              <a href="#" class="text-danger">Правила</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-danger">Контакты</a>
+            </li>
+            <li>
+              <a href="#" class="text-danger">Экспресс - доставка</a>
+            </li>
+            <li>
+              <a href="#" class="text-danger">Политика конфеденциальности</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./js/nav-scripts.js"></script>
+
 </body>
 </html>
