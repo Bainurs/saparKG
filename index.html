@@ -48,7 +48,7 @@
           <img src="./img/taxi.jpg" class="img-fluid" alt="Taxi">
         </div>
 
-        <div class="col-10 col-md-5 shadow px-5 py-4 rounded">
+        <div class="col-10 col-md-5 shadow p-3 p-lg-4 px-xl-5 py-xl-4 rounded">
           <ul class="nav nav-pills justify-content-center mb-3" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
               <button class="nav-link active" id="pills-taxi-tab" data-bs-toggle="pill" data-bs-target="#pills-taxi" type="button" role="tab" aria-controls="pills-taxi" aria-selected="true">Заказать машину</button>
@@ -70,13 +70,13 @@
                   <input type="text" name="where_address" class="form-control" placeholder="Куда адресс">
                 </div>
                 <div class="row">
-                  <div class="col-6 col-lg-4 pr-0">
+                  <div class="col-12 col-lg-4 pr-0">
                     <div class="form-group mt-3">
                         <label for="basic-url" class="form-label">Время</label>
                         <input type="time" name="time" class="form-control" placeholder="Время">
                     </div>
                   </div>
-                  <div class="col-6 col-lg-8">
+                  <div class="col-12 col-lg-8">
                     <div class="form-group mt-3">
                       <label for="basic-url" class="form-label">Пассажир</label>
                       <input type="text" name="count_passenger" class="form-control" placeholder="Сколько пассажиров">
@@ -84,23 +84,24 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-4 d-flex align-items-end">
+                  <div class="col-12 col-lg-4 mt-2 mt-lg-0 d-flex align-items-end">
                     <div class="form-group">
                         <button class="btn btn-primary">Рассчитать</button>
                     </div>
                   </div>  
-                  <div class="col-8">
+                  <div class="col-12 col-lg-8 mt-3 mt-md-0">
                     <label for="basic-url" class="form-label">Итого</label>
                     <input type="text" id="price" class="form-control" placeholder="0" disabled>
                   </div>
-
-                  <div class="col-8">
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-8">
                     <div class="form-group mt-3">
                       <label for="basic-url" class="form-label">Ваш номер телефона</label>
                       <input type="tel" name="phone" class="form-control" placeholder="+996701341231">
                     </div>
                   </div>  
-                  <div class="col-4 d-flex align-items-end justify-content-end">
+                  <div class="col-12 col-md-4 mt-3 mt-md-0 d-md-flex align-items-md-end justify-content-md-end">
                     <div class="form-group">
                         <button class="btn btn-success ml-auto">Заказать</button>
                     </div>
@@ -152,25 +153,26 @@
                   <input type="tel" name="phone_recipient" class="form-control" placeholder="+996701315415">
                 </div>
                 <div class="row">
-                  <div class="col-4 d-flex align-items-end">
+                  <div class="col-12 col-md-4 mt-2 mt-lg-0 d-flex align-items-end">
                     <div class="form-group">
                         <button class="btn btn-primary">Рассчитать</button>
                     </div>
                   </div>  
-                  <div class="col-8">
+                  <div class="col-12 col-md-8 mt-3 mt-md-0">
                     <label for="basic-url" class="form-label">Итого</label>
                     <input type="text" id="price" class="form-control" placeholder="0" disabled>
                   </div>
-
-                  <div class="col-8">
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-8">
                     <div class="form-group mt-3">
                       <label for="basic-url" class="form-label">Ваш номер телефона</label>
                       <input type="tel" name="phone" class="form-control" placeholder="+996701341231">
                     </div>
                   </div>  
-                  <div class="col-4 d-flex align-items-end justify-content-end">
+                  <div class="col-12 col-md-4 mt-3 mt-md-0 d-md-flex align-items-md-end justify-content-md-end">
                     <div class="form-group">
-                        <button class="btn btn-primary ml-auto">Отправить заказ</button>
+                        <button class="btn btn-success ml-auto">Отправить заказ</button>
                     </div>
                   </div> 
                 </div>
@@ -332,15 +334,15 @@
   <footer class="py-5 mt-5">
     <div class="container">
       <div class="row">
-        <div class="col-3">
-          <ul class="list-unstyled">
+        <div class="col-12 col-md-6 col-lg-3">
+          <ul class="list-unstyled text-center">
             <li>
               <a href="#">
                 <img src="./img/Sapar.kg.svg" class="img-fluid" alt="">
               </a>
             </li>
             <li class="mt-3">
-              <ul class="d-flex list-unstyled">
+              <ul class="d-flex list-unstyled justify-content-center">
                 <li class="me-3">
                   <a href="#" class="fs-3 text-dark"><i class="fab fa-whatsapp"></i></a>
                 </li>
@@ -361,42 +363,42 @@
           </ul>
 
         </div>
-        <div class="col-3">
-          <ul class="list-unstyled">
+        <div class="col-12 col-md-6 col-lg-3">
+          <ul class="list-unstyled text-center">
             <li>
-              <a href="#" class="text-danger">Как мы работаем</a>
+              <a href="#" class="text-dark">Как мы работаем</a>
             </li>
             <li>
-              <a href="#" class="text-danger">Вакансии</a>
+              <a href="#" class="text-dark">Вакансии</a>
             </li>
             <li>
-              <a href="#" class="text-danger">Грузоперевозки</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-3">
-          <ul class="list-unstyled">
-            <li>
-              <a href="#" class="text-danger">Тарифы</a>
-            </li>
-            <li>
-              <a href="#" class="text-danger">Курьерам</a>
-            </li>
-            <li>
-              <a href="#" class="text-danger">Правила</a>
+              <a href="#" class="text-dark">Грузоперевозки</a>
             </li>
           </ul>
         </div>
-        <div class="col-3">
-          <ul class="list-unstyled">
+        <div class="col-12 col-md-6 col-lg-3">
+          <ul class="list-unstyled text-center">
             <li>
-              <a href="#" class="text-danger">Контакты</a>
+              <a href="#" class="text-dark">Тарифы</a>
             </li>
             <li>
-              <a href="#" class="text-danger">Экспресс - доставка</a>
+              <a href="#" class="text-dark">Курьерам</a>
             </li>
             <li>
-              <a href="#" class="text-danger">Политика конфеденциальности</a>
+              <a href="#" class="text-dark">Правила</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <ul class="list-unstyled text-center">
+            <li>
+              <a href="#" class="text-dark">Контакты</a>
+            </li>
+            <li>
+              <a href="#" class="text-dark">Экспресс - доставка</a>
+            </li>
+            <li>
+              <a href="#" class="text-dark">Политика конфеденциальности</a>
             </li>
           </ul>
         </div>
