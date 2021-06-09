@@ -9,6 +9,9 @@ label, input, p, span, div,
 .ff-montserrat {
   font-family: 'Montserrat', sans-serif;
 }
+label, button, textarea, input {
+  font-size: 14px!important;
+}
 .logo-text {
   font-size: 28px;
   font-weight: bold;

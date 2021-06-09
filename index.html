@@ -61,27 +61,36 @@
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-taxi" role="tabpanel" aria-labelledby="pills-taxi-tab">
               <form action="">
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <label for="basic-url" class="form-label">Откуда адресс</label>
-                  <input type="text" name="from_address" class="form-control" placeholder="Откуда адресс">
+                  <input type="text" name="from" required class="form-control" placeholder="Откуда адресс">
                 </div>
                 <div class="form-group mt-3">
                   <label for="basic-url" class="form-label">Куда адресс</label>
-                  <input type="text" name="where_address" class="form-control" placeholder="Куда адресс">
+                  <input type="text" name="to" required class="form-control" placeholder="Куда адресс">
                 </div>
+                <div class="form-group mt-3">
+                  <label for="basic-url" class="form-label">Куда адресс</label>
+                  <input type="submit" id="run" value="ПОСТРОИТЬ МАРШРУТ">
+                </div>
+                <div id="map"></div> -->
                 <div class="row">
                   <div class="col-12 col-lg-4 pr-0">
                     <div class="form-group mt-3">
                         <label for="basic-url" class="form-label">Время</label>
-                        <input type="time" name="time" class="form-control" placeholder="Время">
+                        <input type="time" name="time" required class="form-control" placeholder="Время">
                     </div>
                   </div>
                   <div class="col-12 col-lg-8">
                     <div class="form-group mt-3">
                       <label for="basic-url" class="form-label">Пассажир</label>
-                      <input type="text" name="count_passenger" class="form-control" placeholder="Сколько пассажиров">
+                      <input type="text" name="count_passenger" required class="form-control" placeholder="Сколько пассажиров">
                     </div>
                   </div>
+                </div>
+                <div class="form-group mt-3">
+                  <label for="basic-url" class="form-label">Дополнительный комментарий</label>
+                  <textarea class="form-control" style="height: 100px;" placeholder="Примерные ориентиры где находитесь в данный момент для уточнения заказа" id="basic-url"></textarea>
                 </div>
                 <div class="row">
                   <div class="col-12 col-lg-4 mt-2 mt-lg-0 d-flex align-items-end">
@@ -97,8 +106,8 @@
                 <div class="row">
                   <div class="col-12 col-md-8">
                     <div class="form-group mt-3">
-                      <label for="basic-url" class="form-label">Ваш номер телефона</label>
-                      <input type="tel" name="phone" class="form-control" placeholder="+996701341231">
+                      <label for="basic-url" class="form-label">Подтвердите Ваш номер телефона</label>
+                      <input type="tel" name="phone" required class="form-control" placeholder="+996701341231">
                     </div>
                   </div>  
                   <div class="col-12 col-md-4 mt-3 mt-md-0 d-md-flex align-items-md-end justify-content-md-end">
@@ -140,17 +149,38 @@
                       <label class="btn btn-outline-primary" for="btncar2">На грузовом авто</label>
                     </div>
                   </div>
+                </div>
                 <div class="form-group mt-3">
                   <label for="basic-url" class="form-label">Откуда адресс</label>
-                  <input type="text" name="from_address" class="form-control" placeholder="Откуда адресс">
+                  <input type="text" name="from_address" required class="form-control" placeholder="Откуда адресс">
+                </div>
+                <div class="form-group">
+                  <label for="basic-url" class="form-label">Номер телефона отправителя</label>
+                  <input type="tel" name="from_phone" required class="form-control" placeholder="+996701889654">
                 </div>
                 <div class="form-group mt-3">
                   <label for="basic-url" class="form-label">Куда адресс</label>
-                  <input type="text" name="where_address" class="form-control" placeholder="Куда адресс">
+                  <input type="text" name="where_address" required class="form-control" placeholder="Куда адресс">
                 </div>
                 <div class="form-group mt-3">
                   <label for="basic-url" class="form-label">Номер телефона получателя</label>
-                  <input type="tel" name="phone_recipient" class="form-control" placeholder="+996701315415">
+                  <input type="tel" name="phone_recipient" required class="form-control" placeholder="+996701315415">
+                </div>
+
+                <div class="row mt-3">
+                  <div class="col-12 col-md-6 form-group">
+                    <label for="basic-url" class="form-label">Дата доставки</label>
+                    <input type="date" name="date" required class="form-control">
+                  </div>
+                  <div class="col-12 col-md-6 form-group">
+                    <label for="basic-url" class="form-label">Время доставки</label>
+                    <input type="time" name="time" required class="form-control">
+                  </div>
+                </div>
+               
+                <div class="form-group mt-3">
+                  <label for="basic-url" class="form-label">Дополнительный комментарий</label>
+                  <textarea class="form-control" style="height: 100px;" placeholder="Примерные ориентиры где находитесь в данный момент для уточнения заказа" id="basic-url"></textarea>
                 </div>
                 <div class="row">
                   <div class="col-12 col-md-4 mt-2 mt-lg-0 d-flex align-items-end">
@@ -167,7 +197,7 @@
                   <div class="col-12 col-md-8">
                     <div class="form-group mt-3">
                       <label for="basic-url" class="form-label">Ваш номер телефона</label>
-                      <input type="tel" name="phone" class="form-control" placeholder="+996701341231">
+                      <input type="tel" name="phone" required class="form-control" placeholder="+996701341231">
                     </div>
                   </div>  
                   <div class="col-12 col-md-4 mt-3 mt-md-0 d-md-flex align-items-md-end justify-content-md-end">
@@ -330,7 +360,25 @@
       </div>
     </div>
   </section>
-
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <div class="form-group">
+          <label for="basic-url" class="form-label">Откуда адресс</label>
+          <input type="text" id="from" required class="form-control" placeholder="Откуда адресс">
+        </div>
+        <div class="form-group mt-3">
+          <label for="basic-url" class="form-label">Куда адресс</label>
+          <input type="text" id="to" required class="form-control" placeholder="Куда адресс">
+        </div>
+        <div class="form-group mt-3">
+          <label for="basic-url" class="form-label">Куда адресс</label>
+          <input type="submit" id="run" value="ПОСТРОИТЬ МАРШРУТ">
+        </div>
+        <div id="map" class="h-100 w-50"></div>
+      </div>
+    </div>
+  </div>
   <footer class="py-5 mt-5">
     <div class="container">
       <div class="row">
@@ -409,6 +457,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./js/nav-scripts.js"></script>
-
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=22e88d59-00b9-4f64-ad1c-8994b80afb34" type="text/javascript"></script>
+  <script src="./js/multiRoute.js" type="text/javascript" />
+  <script src="./js/custom_view.js" type="text/javascript" />
+  
 </body>
 </html>
